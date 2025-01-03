@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "MdPlace",
+        "title": "Find us",
+        "details": "Banglore, Karnataka, India"
+    },
+    {
+        "icon": "IoCallSharp",
+        "title": "call us",
+        "details": "8050003784"
+    },
+    {
+        "icon": "TbMailPlus",
+        "title": "Mail us",
+        "details": "shailyapp@gmail.com"
+    }
+]
