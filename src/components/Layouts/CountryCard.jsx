@@ -18,11 +18,11 @@ export const CountryCard = ({country}) => {
                     <p>
                         <span className="card-description">Population: </span>
                         {population > 9999999 ? (population / 1000000).toFixed(1) + 'M' : population.toLocaleString()}
-                        {/* 
-                            'population / 1,000,000' to convert it to millions.
+                        
+                            {/* 'population / 1,000,000' to convert it to millions.
                             '.toFixed(1)' -> format the number -> one decimal place.("1234.6")
-                            'M' -> appended -> to indicate millions.
-                         */}
+                            'M' -> appended -> to indicate millions. */}
+                        
                     </p>
                     <p>
                         <span className="card-description">Region: </span>
@@ -40,5 +40,6 @@ export const CountryCard = ({country}) => {
             </div>
             
         </li>
+
     )
 }
