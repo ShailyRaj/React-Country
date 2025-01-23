@@ -1,6 +1,6 @@
 import { useEffect, useState, useTransition } from "react";
 import { NavLink, useParams } from "react-router-dom"
-import Loader from "../UI/Loader";
+import { Loader } from "../UI/Loader";
 import { getCountryIndData } from "../../api/postApi";
 
 export const CountryDetails = () => {
@@ -40,7 +40,7 @@ export const CountryDetails = () => {
                                 <span className="card-description">Native Names:</span>
                                 {Object.keys(country.name.nativeName)
                                     .map((key) => country.name.nativeName[key].common)
-                                    .join(",")}
+                                    .join(", ")}
                             </p>
                             <p>
                                 <span className="card-description"> Population: </span>
@@ -67,13 +67,13 @@ export const CountryDetails = () => {
                                 <span className="card-description"> Currencies: </span>
                                 {Object.keys(country.currencies)
                                     .map((currElem) => country.currencies[currElem].name)
-                                    .join(",")}   
+                                    .join(", ")}   
                             </p>
                             <p>
                                 <span className="card-description"> Languages: </span>
                                 {Object.keys(country.languages)
                                     .map((currElem) => country.languages[currElem])
-                                    .join(",")}   
+                                    .join(", ")}   
                             </p>
                         </div>
                     </div>

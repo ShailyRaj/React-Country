@@ -28,12 +28,32 @@ h5 {
 p,
 li,
 a,
+button 
+{
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* my own */
+/* 
 button {
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
   line-height: 1.6;
   color: #fff;
-}
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgb(83, 83, 83);
+    transform: scale(1.1);
+  }
+} */
+
 
 li {
   list-style: none;
@@ -46,6 +66,8 @@ a {
     color: #2e86c1;
   }
 }
+
+ 
 
 button {
   display: flex;
@@ -464,13 +486,15 @@ country Card
 
   & input {
     font-family: "urbanist";
-    font-size: 1.55rem;
+    /* font-size: 1.55rem; */
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
     text-transform: capitalize;
     color: rgba(255, 255, 255, 0.8);
     border: 0.05rem solid #fff;
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
+
   }
 
   & .select-section {
