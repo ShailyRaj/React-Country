@@ -683,9 +683,9 @@ contact us Page ends here
   /* margin-bottom: 0; */
 
   /* addition for loader */
-  /* margin: auto;
+  margin: auto;
   margin-bottom: 200px;
-  margin-top: 200px; */
+  margin-top: 215px;
   
 }
 @keyframes l3 {
@@ -699,4 +699,22 @@ contact us Page ends here
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+/* addition to loader */
+@media screen and (max-width: 700px) {
+  .loader {
+    margin: auto;
+    margin-bottom: 130px;
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .loader {
+    margin: auto;
+    margin-bottom: 110px;
+    margin-top: 120px;
+  }
 }
