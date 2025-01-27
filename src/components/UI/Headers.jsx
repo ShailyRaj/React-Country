@@ -10,9 +10,14 @@ export const Headers = () => {
         return setShow(!show)
     }
 
+    // My addition to hamburger menu
+    const handleLinkClick = () => {
+        setShow(false); // Closes the menu when a link is clicked
+    };
+
     return (
         <header>
-            <div className="container">
+            <div className="container head">
                 <div className="grid navbar-grid">
 
                     <div className="Logo">
@@ -21,25 +26,25 @@ export const Headers = () => {
                         </NavLink>
                     </div>
 
-                    <nav >
+                    <nav className={show ? "menu-mobile" : "menu-web"}>
                         <ul>
                             <li>
-                                <NavLink to = "/">
+                                <NavLink to = "/" onClick={handleLinkClick}>
                                     Home
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to = "/about">
+                                <NavLink to = "/about" onClick={handleLinkClick}>
                                     About
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to = "/country">
+                                <NavLink to = "/country" onClick={handleLinkClick}>
                                     Country
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to = "/contact">
+                                <NavLink to = "/contact" onClick={handleLinkClick}>
                                     Contact
                                 </NavLink>
                             </li>
@@ -47,7 +52,7 @@ export const Headers = () => {
                     </nav>
 
                     <div className='ham-menu'>
-                        <button onClick={handleButtonToggle}>
+                        <button onClick={handleButtonToggle} >
                             <GiHamburgerMenu />
                         </button>
                     </div>

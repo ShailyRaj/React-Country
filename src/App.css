@@ -146,10 +146,10 @@ header {
 nav ul {
   display: flex;
   justify-content: flex-end;
-  /* background-color: yellow; */
+  /* background-color: yellow ; */
   gap: 3.2rem;
   color: #fff;
-
+  
   & li a {
     color: #fff;
     text-decoration: none;
@@ -161,7 +161,7 @@ nav ul {
 }
 
 /* media queries  */
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 735px) {
   .menu-web {
     display: none;
   }
@@ -173,11 +173,14 @@ nav ul {
 
   .menu-mobile {
     position: absolute;
-    top: 10rem;
+    top: 8rem;
     left: 0;
     background-color: #0d1212;
     width: 100%;
     box-shadow: rgba(255, 252, 252, 0.25) 0px 14px 28px;
+    
+    /* addition */
+    z-index: 1000; /* Ensure it overlays correctly */
   }
 
   .menu-mobile ul {
@@ -193,6 +196,7 @@ nav ul {
       margin-bottom: 1.2rem;
     }
   }
+
 }
 
 /* hero section  */
@@ -343,6 +347,8 @@ nav ul {
   display: flex;
   gap: 2.4rem;
   align-items: center;
+  /* addtion */
+  bottom: 0;
 
   & .icon {
     color: #3a4ed5;
@@ -385,6 +391,7 @@ ul {
 .footer-section {
   background: #151414;
   position: relative;
+  margin-bottom: 0;
 }
 
 .copyright-area {
@@ -412,6 +419,7 @@ ul {
   color: #878787;
 }
 
+
 /* --------------- 
 country Card 
 ------------------ */
@@ -436,6 +444,14 @@ country Card
   }
 }
 
+/* my country code */
+@media screen and (max-width: 600px) {
+  .container-card {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+/* my country code */
 
 /* indivisual card container  */
 .country-details-card {
@@ -478,6 +494,10 @@ country Card
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3.2rem;
+  /* my style */
+  padding-left: 20px;
+  padding-right: 20px;
+  /* my style */
 
   & .container-card {
     padding: 0.8rem 2.4rem;
@@ -496,6 +516,7 @@ country Card
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
 
   }
+
 
   & .select-section {
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
@@ -535,6 +556,39 @@ country Card
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.5);
 }
+
+
+
+  /* my code */
+
+    @media screen and (max-width: 600px) {
+      .section-searchFilter {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-wrap: wrap; /* Ensure items wrap properly on small screens */
+        gap: 1.6rem; /* Add spacing between child elements */
+      }
+    
+      
+      .section-searchFilter select,
+      .section-searchFilter button {
+        width: 80%; /* Make all elements full width */
+        margin-left: 1.7rem;
+        margin-right: 5.2rem;
+        height: 30px;
+      }
+
+      .section-searchFilter input {
+        width: 70%; /* Make all elements full width */
+        margin-left: 3rem;
+        margin-right: 2rem;
+
+      }
+    }
+    
+  /* my code */
+
 
 /* ------------------ 
 contact us page 
@@ -604,20 +658,35 @@ contact us Page ends here
   }
 }
 
+/* addition */
+@media screen and (max-width: 700px) {
+  .section-contact {
+    margin: 40px;
+  }
+}
+
 /* //Loader  */
 /* HTML: <div class="loader"></div> */
 .loader {
-  width: 50px;
+  width: 60px;
   padding: 8px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #25b09b;
+  background: #3a4ed5;
   --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
   -webkit-mask: var(--_m);
   mask: var(--_m);
   -webkit-mask-composite: source-out;
   mask-composite: subtract;
   animation: l3 1s infinite linear;
+  /* margin: auto; */
+  /* margin-bottom: 0; */
+
+  /* addition for loader */
+  /* margin: auto;
+  margin-bottom: 200px;
+  margin-top: 200px; */
+  
 }
 @keyframes l3 {
   to {

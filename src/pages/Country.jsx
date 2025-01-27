@@ -1,6 +1,6 @@
 import { useEffect, useState, useTransition } from "react"
 import { getCountryData } from "../api/postApi";
-import {Loader} from "../components/UI/Loader";
+import Loader from "../components/UI/Loader";
 import { CountryCard } from "../components/Layouts/CountryCard";
 import { SearchFilter } from "../components/UI/SearchFilter";
 
